@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+    form(method='POST' action='/api/auth/login')
+      label(for='username') Nombre de usuario:
+      input(type='text' name='username' id='username' required)
+      label(for='password') Contraseña:
+      input(type='password' name='password' id='password' required)
+      button(type='submit') Acceder
